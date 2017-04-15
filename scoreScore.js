@@ -5,16 +5,20 @@ var resetButton = document.querySelector("#reset");
 //
 var pblueDisplay = document.querySelector("#pblueDisplay");
 var porangeDisplay = document.querySelector("#porangeDisplay");
-
+var numInput = document.querySelector("input");
+var p = document.querySelector("p");
+var limitDisplay = document.querySelector("p span");
+var input = document.querySelector("input");
 var pblueScore = 0;
 var porangeScore = 0;
 var gameEnd = false;//add boolean to limit game run
-var victoryScore = 6;
+var victoryScore = 3;
 
 
 pblueButton.addEventListener("click", function(){
 	if(!gameEnd){
 		pblueScore++;
+		console.log(pblueScore, victoryScore);
 		if(pblueScore === victoryScore){
 			pblueDisplay.classList.add("victoryBlue");
 			gameEnd = true;
@@ -45,4 +49,8 @@ resetButton.addEventListener("click", function(){
 	pblueDisplay.classList.remove("victoryBlue");
 	porangeDisplay.classList.remove("victoryOrange");
 	gameEnd = false;
+});
+numInput.addEventListener("change", function(){
+	limitDisplay.textContent = numInput.value;
+	victoryScore = parseInt(numInput.value);
 });
