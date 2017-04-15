@@ -9,17 +9,30 @@ var porangeDisplay = document.querySelector("#porangeDisplay");
 var pblueScore = 0;
 var porangeScore = 0;
 var gameEnd = false;//add boolean to limit game run
+var victoryScore = 6;
 
 
 pblueButton.addEventListener("click", function(){
-	pblueScore++;
+	if(!gameEnd){
+		pblueScore++;
+		if(pblueScore === victoryScore){
+			pblueDisplay.classList.add("winnerBlue");
+			gameEnd = true;
+		}
+		pblueDisplay.textContent = pblueScore;
+	}
 	
-	pblueDisplay.textContent = pblueScore;
 });
 porangeButton.addEventListener("click", function(){
-	porangeScore++;
+	if(!gameEnd){
+		porangeScore++;
+		if(porangeScore === victoryScore){
+			porangeDisplay.classList.add("winnerOrange");
+			gameEnd = true;
+		}
+		porangeDisplay.textContent = porangeScore;
+	}
 	
-	porangeDisplay.textContent = porangeScore;
 });
 resetButton.addEventListener("click", function(){
 	alert("Clicked!");

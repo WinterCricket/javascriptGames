@@ -18,3 +18,13 @@
 #reset {
 
 }
+
+.winnerBlue {
+	color: blue;
+	font-size: 2em;
+}
+
+.winnerOrange {
+	color: orange;
+	font-size: 2em;
+}
