@@ -16,7 +16,7 @@ pblueButton.addEventListener("click", function(){
 	if(!gameEnd){
 		pblueScore++;
 		if(pblueScore === victoryScore){
-			pblueDisplay.classList.add("winnerBlue");
+			pblueDisplay.classList.add("victoryBlue");
 			gameEnd = true;
 		}
 		pblueDisplay.textContent = pblueScore;
@@ -27,7 +27,7 @@ porangeButton.addEventListener("click", function(){
 	if(!gameEnd){
 		porangeScore++;
 		if(porangeScore === victoryScore){
-			porangeDisplay.classList.add("winnerOrange");
+			porangeDisplay.classList.add("victoryOrange");
 			gameEnd = true;
 		}
 		porangeDisplay.textContent = porangeScore;
@@ -35,5 +35,14 @@ porangeButton.addEventListener("click", function(){
 	
 });
 resetButton.addEventListener("click", function(){
-	alert("Clicked!");
+	pblueScore = 0;
+	porangeScore = 0;
+
+	pblueDisplay.textContent = pblueScore;
+	porangeDisplay.textContent = porangeScore;
+
+	
+	pblueDisplay.classList.remove("victoryBlue");
+	porangeDisplay.classList.remove("victoryOrange");
+	gameEnd = false;
 });

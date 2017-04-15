@@ -7,19 +7,9 @@
 	background: orange;
 }
 
-#pblue {
 
-}
 
-#porange {
-
-}
-
-#reset {
-
-}
-
-.winnerBlue {
+/*.winnerBlue {
 	color: blue;
 	font-size: 2em;
 }
@@ -27,4 +17,13 @@
 .winnerOrange {
 	color: orange;
 	font-size: 2em;
+}*/
+.victoryBlue{
+	color:blue;
+	font-size: 1.5em;
+}
+
+.victoryOrange{
+	color: orange;
+	font-size: 1.5em;
 }
