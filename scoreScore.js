@@ -56,7 +56,7 @@ function reset(){
 }
 
 numInput.addEventListener("change", function(){
-	limitDisplay.textContent = numInput.value;
-	victoryScore = Number(numInput.value);
+	limitDisplay.textContent = this.value;
+	victoryScore = Number(this.value);
 	reset();
 });
