@@ -39,6 +39,10 @@ porangeButton.addEventListener("click", function(){
 	
 });
 resetButton.addEventListener("click", function(){
+	reset();
+});
+
+function reset(){
 	pblueScore = 0;
 	porangeScore = 0;
 
@@ -49,8 +53,10 @@ resetButton.addEventListener("click", function(){
 	pblueDisplay.classList.remove("victoryBlue");
 	porangeDisplay.classList.remove("victoryOrange");
 	gameEnd = false;
-});
+}
+
 numInput.addEventListener("change", function(){
 	limitDisplay.textContent = numInput.value;
-	victoryScore = parseInt(numInput.value);
+	victoryScore = Number(numInput.value);
+	reset();
 });
